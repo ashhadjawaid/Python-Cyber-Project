@@ -65,10 +65,13 @@ Streamlit will print a local URL (usually `http://localhost:8501`).
 ## App Pages
 
 ### 1) Mission Control
+
 A short intro and quick conceptual definitions.
 
 ### 2) The Hash Lab
+
 Type any message and see live:
+
 - MD5
 - SHA-256
 - SHA-512
@@ -76,14 +79,18 @@ Type any message and see live:
 The output highlights differences between the previous and current digest to visualize the **avalanche effect**.
 
 ### 3) Breach Simulator
+
 Shows two mock databases:
+
 - `Insecure_DB` (plaintext passwords)
 - `Secure_DB` (salt + hashed passwords)
 
 Press **SIMULATE HACK** to see what an attacker would steal.
 
 ### 4) Login System
+
 A demo authentication flow:
+
 - **Register** creates a per-user salt and stores only `salt + hash`
 - **Login** recomputes the salted hash and compares using `secrets.compare_digest`
 
