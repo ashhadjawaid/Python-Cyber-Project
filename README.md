@@ -33,11 +33,27 @@ It demonstrates:
 
 ---
 
-## Setup
+## Requirements (Beginner-friendly)
 
-### 1) Create/activate a virtual environment (recommended)
+1. **Install Python (3.9 or newer)**
 
-**macOS / zsh**
+   - Download: https://www.python.org/downloads/
+   - During installation on Windows, **enable**: ✅ _“Add Python to PATH”_
+
+2. **Download / open this project folder**
+
+   - If you downloaded a ZIP: extract it first.
+   - You should see `app.py`, `requirements.txt`, and `README.md` in the same folder.
+
+3. **Open a terminal in the project folder**
+   - **Windows:** open _PowerShell_ or _Command Prompt_ in the folder.
+   - **macOS:** open _Terminal_ and `cd` into the folder.
+
+---
+
+## Setup (macOS / Linux)
+
+### 1) Create and activate a virtual environment
 
 ```bash
 python3 -m venv .venv
@@ -52,13 +68,76 @@ python3 -m pip install -r requirements.txt
 
 ---
 
+## Setup (Windows)
+
+### 1) Verify Python is available
+
+In **PowerShell** (recommended):
+
+```powershell
+python --version
+```
+
+If that fails, try:
+
+```powershell
+py --version
+```
+
+### 2) Create and activate a virtual environment
+
+**PowerShell**:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**Command Prompt (cmd)**:
+
+```bat
+python -m venv .venv
+.venv\Scripts\activate.bat
+```
+
+> If PowerShell blocks activation, run PowerShell as Administrator and execute:
+> `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+### 3) Install dependencies
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+---
+
 ## Run the app
+
+### macOS / Linux
 
 ```bash
 python3 -m streamlit run app.py
 ```
 
-Streamlit will print a local URL (usually `http://localhost:8501`).
+### Windows
+
+```powershell
+python -m streamlit run app.py
+```
+
+---
+
+## Open in your browser
+
+After running, Streamlit prints something like:
+
+- `Local URL: http://localhost:8501`
+
+Open your browser and go to:
+
+- **http://localhost:8501**
+
+If port **8501** is busy, Streamlit will choose another port and print it in the terminal.
 
 ---
 
